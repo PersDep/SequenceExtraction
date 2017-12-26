@@ -187,10 +187,21 @@ vector findBestPrimeChain(const char *name)
 
 int main(int argc, char **argv)
 {
-    if (argc != 2)
+    if (argc < 2)
     {
         printf("Wrong arguments!\n");
         return 1;
+    }
+
+    int printData = 0;
+    if (argc == 3 && argv[2][0] == 'p')
+        printData = 1;
+
+    if (printData)
+    {
+        vector myData = readDataFile(argv[1]);
+        print(myData);
+        free(myData.buf);
     }
 
     vector result = findBestPrimeChain(argv[1]);

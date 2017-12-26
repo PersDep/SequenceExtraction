@@ -1,19 +1,19 @@
 #!/bin/bash
 
-./buildFiles/testTaskTekon data/exampleTest.data
+./buildFiles/testTaskTekon data/exampleTest.data print
 echo
 echo
 
 for i in `seq 6`; do
-	./buildFiles/testTaskTekon data/test$i.data
+	./buildFiles/testTaskTekon data/test$i.data print
 	echo
 done
 echo
 
 for i in `seq 8`; do
-	./buildFiles/testTaskTekon data/myTest$i.data
+	./buildFiles/testTaskTekon data/myTest$i.data print
 	echo
 done
 echo
 
-./buildFiles/testTaskTekon data/bigTest.data
+./buildFiles/testTaskTekon data/bigTest.data print
