@@ -7,3 +7,10 @@ for i in `seq 6`; do
 	./buildFiles/testTaskTekon data/test$i.data
 	echo
 done
+
+for i in `seq 8`; do
+	./buildFiles/testTaskTekon data/myTest$i.data
+	echo
+done
+
+./buildFiles/testTaskTekon data/bigTest.data

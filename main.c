@@ -193,18 +193,6 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    vector data = newVector();
-    append(&data, 2); append(&data, 3); append(&data, 5); //append(&data, 5);
-    append(&data, 2); append(&data, 5); append(&data, 11); //append(&data, 5); append(&data, 7);
-    print(data);
-
-    //generateDataFile(argv[1], data);
-    free(data.buf);
-
-    vector myData = readDataFile(argv[1]);
-    print(myData);
-    free(myData.buf);
-
     vector result = findBestPrimeChain(argv[1]);
     print(result);
     free(result.buf);
